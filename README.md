@@ -16,8 +16,8 @@
 						
 ## Features:
 
-  • Spigot Plugin.
-  • Flexible Configuration.
-  • Support all forks of Spigot.
-  • All Customizable.
-  • Lightweight and minimal performance impact.
+    • Spigot Plugin.
+    • Flexible Configuration.
+    • Support all forks of Spigot.
+    • All Customizable.
+    • Lightweight and minimal performance impact.
