@@ -1,0 +1,46 @@
+# ███████╗██╗██████╗░███████╗███████╗██╗░░░░░██╗░░░██╗
+# ██╔════╝██║██╔══██╗██╔════╝██╔════╝██║░░░░░╚██╗░██╔╝
+# █████╗░░██║██████╔╝█████╗░░█████╗░░██║░░░░░░╚████╔╝░
+# ██╔══╝░░██║██╔══██╗██╔══╝░░██╔══╝░░██║░░░░░░░╚██╔╝░░
+# ██║░░░░░██║██║░░██║███████╗██║░░░░░███████╗░░░██║░░░
+# ╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░░░░╚══════╝░░░╚═╝░░░
+
+# FireFly -  Powerful Fly System!
+# Author: RDProject Development Team
+settings:
+  check-updates: false
+  use-advancedmlgrush-api: false
+
+messages:
+  prefix: "§8• §cFireFly §8| §7"
+  only-players: "This command available only for players!"
+  no-permission: "§cYou do not have permission! &8(&4{permission}&8)"
+  offline-player: "§cPlayer is not online!"
+  incorrect-arguments: "Incorrect arguments, use §c/fly help§7!"
+  config-reloaded: "§cYou successfully reloaded configuration!"
+  # Fly System
+  fly:
+    not-available: "Fly available only in Lobby!"
+    admin-help: |-
+      §8§m------------ §8• §cFireFly §8• §8§m------------
+      §7» &c/fly reload §8× §7Reload configuration!
+      §7» &c/fly speed <speed> [player] §8× §7Set Fly Speed!
+      §7» &c/fly reset [player] §8× §7Reset Fly Speed!
+      §8§m------------ §8• §cFireFly §8• §8§m------------
+    help: |-
+      §8§m------------ §8• §cFireFly §8• §8§m------------
+      §7» &c/fly help §8× §7Show this message!
+      §7» &c[] &7- not required arg; <> &7- required arg
+      §7» &c/fly [player] §8× §7Enable/Disable Fly Mode!
+      §7» &c/fly speed <speed> §8× §7Set Fly Speed!
+      §7» &c/fly reset §8× §7Reset Fly Speed!
+      §8§m------------ §8• §cFireFly §8• §8§m------------
+    enable: "You successfully toggled on your Fly Mode!"
+    enable-other: "You successfully toggled on Fly Mode for §c{target}§7!"
+    disable: "You successfully toggled off your Fly Mode!"
+    disable-other:  "You successfully toggled off Fly Mode for §c{target}§7!"
+    reset: "You successfully reset your Fly Speed!"
+    reset-other: "You successfully reset Fly Speed for §c{target}§7!"
+    set-speed: "You successfully set §c{speed} §7Fly Speed!"
+    set-speed-other: "You successfully set §c{speed} §7Fly Speed for §c{target}§7!"
+    incorrect-speed: "Speed §c{speed} §7does not exist!"

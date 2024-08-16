@@ -1,0 +1,16 @@
+# Main
+name: FireFly
+main: com.rdproject.firefly.FireFly
+version: ${project.version}
+api-version: 1.20
+softdepend: [AdvancedMLGRush]
+
+# Misc
+author: RDProject Development Team
+website: https://rdproject.net
+description: FireFly -  Powerful Fly System!
+
+# Commands
+commands:
+  fly:
+    aliases: [fl, флай, полёт, полет]
