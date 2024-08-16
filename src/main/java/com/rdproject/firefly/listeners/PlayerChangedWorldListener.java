@@ -7,7 +7,6 @@
 package com.rdproject.firefly.listeners;
 
 import com.rdproject.firefly.FireFly;
-import com.rdproject.firefly.commands.FlyCommand;
 import com.skillplugins.advancedmlgrush.MLGRush;
 import com.skillplugins.advancedmlgrush.game.GameState;
 import org.bukkit.Bukkit;
@@ -31,7 +30,7 @@ public class PlayerChangedWorldListener implements Listener {
             GameState gameState = MLGRush.getApi().getGameState(player);
             if (gameState == GameState.INGAME) {
                 player.setAllowFlight(false);
-            } else if (gameState != GameState.SPECTATOR && FlyCommand.FLY_PLAYERS.contains(player)) {
+            } else if (gameState != GameState.SPECTATOR && FireFly.FLY_PLAYERS.contains(player)) {
                 player.setAllowFlight(true);
             }
         }, 1);

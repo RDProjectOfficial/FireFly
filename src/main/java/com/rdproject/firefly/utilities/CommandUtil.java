@@ -34,16 +34,12 @@ public class CommandUtil {
         return true;
     }
 
-    public boolean checkIsThereTarget(Player player, Player target) {
+    public boolean checkTarget(Player player, Player target) {
         if (target == null || !target.isOnline()) {
             player.sendMessage(ChatUtil.colorWithPrefix("offline-player"));
             return false;
         }
         return true;
-    }
-
-    public void sendIncorrectArgumentsMsg(Player player) {
-        player.sendMessage(ChatUtil.colorWithPrefix("incorrect-arguments"));
     }
 
 }

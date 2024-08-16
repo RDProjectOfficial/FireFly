@@ -12,12 +12,14 @@ import com.rdproject.firefly.listeners.*;
 import lombok.Getter;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
@@ -29,6 +31,8 @@ public class FireFly extends JavaPlugin {
 
     @Getter private static FireFly instance;
     @Getter private static FireFlyAPI api;
+
+    public static final HashSet<Player> FLY_PLAYERS = new HashSet<>();
 
     private Metrics metrics;
 
@@ -53,7 +57,6 @@ public class FireFly extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        FlyCommand.FLY_PLAYERS.clear();
         metrics.shutdown();
     }
 

@@ -6,7 +6,7 @@
 
 package com.rdproject.firefly.listeners;
 
-import com.rdproject.firefly.commands.FlyCommand;
+import com.rdproject.firefly.FireFly;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -20,7 +20,7 @@ public class PlayerQuitListener implements Listener {
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
-        FlyCommand.FLY_PLAYERS.remove(event.getPlayer());
+        FireFly.FLY_PLAYERS.remove(event.getPlayer());
     }
 
 }

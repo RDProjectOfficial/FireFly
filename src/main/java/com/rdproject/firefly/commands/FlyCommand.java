@@ -17,16 +17,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashSet;
-
 /**
  * Command Class
  *
  * @author RDProject on 11.08.2024
  */
 public class FlyCommand implements CommandExecutor {
-
-    public static final HashSet<Player> FLY_PLAYERS = new HashSet<>();
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -35,8 +31,8 @@ public class FlyCommand implements CommandExecutor {
 
         if (args.length == 0) {
             if (!isAllowedFly(player)) return true;
-            if (!FLY_PLAYERS.add(player)) {
-                FLY_PLAYERS.remove(player);
+            if (!FireFly.FLY_PLAYERS.add(player)) {
+                FireFly.FLY_PLAYERS.remove(player);
             }
             player.setAllowFlight(!player.getAllowFlight());
             player.sendMessage(ChatUtil.colorWithPrefix(player.getAllowFlight() ? "fly.enable" : "fly.disable"));
@@ -52,7 +48,7 @@ public class FlyCommand implements CommandExecutor {
                 }
                 if (!CommandUtil.hasPermission(player, "fly-admin")) return false;
                 Player target = Bukkit.getPlayerExact(args[1]);
-                if (!CommandUtil.checkIsThereTarget(player, target)) return false;
+                if (!CommandUtil.checkTarget(player, target)) return false;
                 target.setFlySpeed(0.1F);
                 target.sendMessage(ChatUtil.colorWithPrefix("fly.reset"));
                 player.sendMessage(ChatUtil.colorWithPrefix("fly.reset-other").replace("{target}", target.getName()));
@@ -72,7 +68,7 @@ public class FlyCommand implements CommandExecutor {
                     case 3 -> {
                         if (!CommandUtil.hasPermission(player, "fly-admin")) return false;
                         Player target = Bukkit.getPlayerExact(args[2]);
-                        if (!CommandUtil.checkIsThereTarget(player, target)) return false;
+                        if (!CommandUtil.checkTarget(player, target)) return false;
                         try {
                             target.setFlySpeed(Float.parseFloat(args[1]) / 10);
                             target.sendMessage(ChatUtil.colorWithPrefix("fly.set-speed")
@@ -101,10 +97,10 @@ public class FlyCommand implements CommandExecutor {
             default -> {
                 if (!CommandUtil.hasPermission(player, "fly-other")) return false;
                 Player target = Bukkit.getPlayerExact(args[0]);
-                if (!CommandUtil.checkIsThereTarget(player, target)) return false;
+                if (!CommandUtil.checkTarget(player, target)) return false;
                 if (!isAllowedFly(player)) return true;
-                if (!FLY_PLAYERS.add(target)) {
-                    FLY_PLAYERS.remove(target);
+                if (!FireFly.FLY_PLAYERS.add(target)) {
+                    FireFly.FLY_PLAYERS.remove(target);
                 }
                 target.setAllowFlight(!target.getAllowFlight());
                 target.sendMessage(ChatUtil.colorWithPrefix(target.getAllowFlight() ? "fly.enable" : "fly.disable"));
