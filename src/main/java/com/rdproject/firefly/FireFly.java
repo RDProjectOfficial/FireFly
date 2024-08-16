@@ -29,10 +29,10 @@ import java.util.Scanner;
  */
 public class FireFly extends JavaPlugin {
 
+    public static final HashSet<Player> FLY_PLAYERS = new HashSet<>();
+
     @Getter private static FireFly instance;
     @Getter private static FireFlyAPI api;
-
-    public static final HashSet<Player> FLY_PLAYERS = new HashSet<>();
 
     private Metrics metrics;
 
