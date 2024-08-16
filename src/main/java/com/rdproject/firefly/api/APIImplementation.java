@@ -6,7 +6,7 @@
 
 package com.rdproject.firefly.api;
 
-import com.rdproject.firefly.commands.FlyCommand;
+import com.rdproject.firefly.FireFly;
 import org.bukkit.entity.Player;
 
 /**
@@ -18,7 +18,7 @@ public class APIImplementation implements FireFlyAPI {
 
     @Override
     public boolean isPlayerInFlyMode(Player player) {
-        return FlyCommand.FLY_PLAYERS.contains(player);
+        return FireFly.FLY_PLAYERS.contains(player);
     }
 
 }
