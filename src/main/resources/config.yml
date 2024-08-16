@@ -8,7 +8,7 @@
 # FireFly -  Powerful Fly System!
 # Author: RDProject Development Team
 settings:
-  check-updates: false
+  check-updates: true
   use-advancedmlgrush-api: false
 
 messages:
