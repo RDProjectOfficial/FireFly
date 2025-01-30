@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright (c) 2024 RDProject
+  ~ Copyright (c) 2025 RDProject
   ~ Project name: FireFly
   ~ All rights reserved.
   -->
@@ -12,7 +12,7 @@
 
     <groupId>com.rdproject.firefly</groupId>
     <artifactId>FireFly</artifactId>
-    <version>1.0</version>
+    <version>1.0-STABLE</version>
 
     <name>FireFly</name>
     <description>FireFly - Powerful Fly System!</description>
@@ -126,14 +126,14 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.34</version>
+            <version>1.18.36</version>
             <scope>provided</scope>
         </dependency>
         <!-- JB Annotations -->
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>24.1.0</version>
+            <version>26.0.2</version>
             <scope>provided</scope>
         </dependency>
         <!-- AdvancedMLGRush API -->
@@ -148,7 +148,7 @@
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
-            <version>3.0.2</version>
+            <version>3.1.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
